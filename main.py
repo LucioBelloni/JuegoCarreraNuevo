@@ -63,7 +63,7 @@ lista_aceite.append(mancha_aceite)
 
 #crear autos bots
 
-for i in range(3):
+for i in range(5):
     auto_bots = Auto_bots()
     lista_bots.append(auto_bots)
 
@@ -145,7 +145,7 @@ while flag_correr:
                         auto = Auto(320,760)
                         mancha_aceite = Mancha_aceite()
                         lista_aceite.append(mancha_aceite)
-                        for i in range(3):
+                        for i in range(5):
                             auto_bots = Auto_bots()
                             lista_bots.append(auto_bots)
 
@@ -213,9 +213,8 @@ while flag_correr:
                         nitro.play()
                         bandera_nitro = False
                     velocidad = 7
-                    auto_bots.velocidad = 10
-                elif auto.score > 25:
-                    auto_bots.velocidad = 12
+                    
+              
 
             if auto.rect.colliderect(auto_bots.rect):
                 subir_data(ingreso,auto.score)

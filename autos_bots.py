@@ -8,7 +8,6 @@ class Auto_bots:
         self.image = pygame.image.load("images/auto_bot{0}.png".format(random.randint(1,3)))
         self.image = pygame.transform.scale(self.image,(100,100))
         self.rect = self.image.get_rect()
-        #self.guardar = random.randrange(130,520,165)
         self.rect.x =  random.randrange(130,520,165)
         self.rect.y =  random.randrange(-3000,-150,200) 
         self.visible = True
@@ -27,9 +26,8 @@ class Auto_bots:
         if self.bandera == True:
             pass
 
-        #if self.rect.y > 0 and self.rect.x >= carril_izquierdo and self.rect.x <= carril_derecho:
-        #    self.rect.x += random.randrange(-100,100,159)
-        #if contador_auito_bopt % 20 == 0:
+        if self.rect.y > 0 and self.rect.x >= carril_izquierdo and self.rect.x <= carril_derecho:
+            self.rect.x += random.randrange(-100,10,159)
 
     def dibujar(self,pantalla):
         pantalla.blit(self.image,self.rect)
